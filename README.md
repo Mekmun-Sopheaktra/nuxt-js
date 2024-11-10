@@ -66,3 +66,8 @@ From the root project directory, create a file `.vscode/settings.json`. Then add
   "vetur.validation.template": false
 }
 ```
+# Deployment
+
+```
+.output/public
+```
