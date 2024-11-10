@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
-  devtools: { enabled: false },
-
+  ssr: false, // Disable SSR to create a static site
+  generate: {
+    fallback: true, // Optional: for SPA behavior (404.html)
+  },
   modules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
@@ -29,11 +30,9 @@ export default defineNuxtConfig({
       title: 'ITE',
     },
   },
-
   sitemap: {
-    hostname: process.env.APP_SITE_URL || 'https://yourwebsite.com', // Replace with your actual domain
+    hostname: process.env.APP_SITE_URL || 'https://yourwebsite.com',
     routes: async () => {
-      // You can fetch dynamic routes from an API or define static routes
       return [
         '/page-1',
         '/page-2',
@@ -41,10 +40,8 @@ export default defineNuxtConfig({
         '/products/product-2',
       ]
     },
-    gzip: true, // Optional: compresses the sitemap.xml file
-    exclude: [
-      '/admin/**', // Exclude specific routes (like admin routes) if needed
-    ],
+    gzip: true,
+    exclude: ['/admin/**'],
   },
 
   compatibilityDate: '2024-11-10',
