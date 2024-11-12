@@ -10,10 +10,11 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     ['@vueuse/nuxt', { ssr: false }],
     ['@nuxtjs/sitemap'],
+    '@element-plus/nuxt'
   ],
 
   css: ['~/assets/scss/index.scss'],
-
+  elementPlus : { /** Options */ },
   runtimeConfig: {
     public: {
       appBaseUrl: process.env.APP_BASE_URL,

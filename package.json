@@ -17,10 +17,12 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.1.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/sitemap": "^6.1.5",
     "dayjs-nuxt": "^1.1.2",
+    "element-plus": "^2.8.7",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
